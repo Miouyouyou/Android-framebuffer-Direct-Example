@@ -15,8 +15,8 @@ a color randomly selected in a palette of 4 colors.
 
 The useful part of the example is inside
 **[fill_pixels.c](./fill_pixels.c)**.  
-**[android_native_app_glue.c](./android_native_app_glue.c) is, as the
-name implies, just a way to connect Android's NativeActivity code to
+**[android_native_app_glue.c](./android_native_app_glue.c)** is, as
+the name implies, just a way to connect Android's NativeActivity code
 to this native code.
 
 Testing
