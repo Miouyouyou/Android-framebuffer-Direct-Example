@@ -1,0 +1,11 @@
+*~
+\#*
+*#
+*.bak
+*.o
+*.obj
+*.so
+*.a
+*.swp
+*.kateswp
+
