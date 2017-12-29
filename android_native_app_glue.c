@@ -26,9 +26,9 @@
 #include "android_native_app_glue.h"
 #include <android/log.h>
 
-#define  LOG_TAG    "libplasma"
+#define  LOG_TAG    "app_glue"
 #define  LOG(level, format, ...) \
-	__android_log_print(level,"[%s:%d]\n" format, __func__, __LINE__, ##__VA_ARGS__)
+	__android_log_print(level, LOG_TAG, "[%s:%d]\n" format, __func__, __LINE__, ##__VA_ARGS__)
 
 /* For debug builds, always enable the debug traces in this library */
 #ifdef DEBUG

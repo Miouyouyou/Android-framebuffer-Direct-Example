@@ -23,9 +23,9 @@
 #include <stdint.h>
 #include <stdlib.h> // rand
 
-#define  LOG_TAG    "libplasma"
+#define  LOG_TAG    "fill_pixels"
 #define  LOG(level, format, ...) \
-	__android_log_print(level,"[%s:%d]\n" format, __func__, __LINE__, ##__VA_ARGS__)
+	__android_log_print(level, LOG_TAG, "[%s:%d]\n" format, __func__, __LINE__, ##__VA_ARGS__)
 
 typedef uint16_t color_16bits_t;
 typedef uint8_t  color_8bits_channel_t;
