@@ -70,6 +70,8 @@ static void fill_pixels(ANativeWindow_Buffer* buffer)
 
 	window_pixel_t * __restrict current_pixel = buffer->bits;
 
+	uint_fast32_t const line_width  = buffer->width;
+	uint_fast32_t const line_stride = buffer->stride;
 	uint_fast32_t n_lines = buffer->height;
 	while(n_lines--) {
 
@@ -77,7 +79,7 @@ static void fill_pixels(ANativeWindow_Buffer* buffer)
 			current_pixel;
 
 		window_pixel_t const * __restrict const last_pixel_of_the_line =
-			current_line_start + buffer->width;
+			current_line_start + line_width;
 
 		current_pixel_color = pixel_colors[p_c];
 
@@ -87,8 +89,7 @@ static void fill_pixels(ANativeWindow_Buffer* buffer)
 		}
 
 		p_c = pixel_colors_next(p_c);
-		current_pixel =
-			buffer_first_pixel_of_next_line(buffer, current_line_start);
+		current_pixel =	current_line_start + line_stride;
 	}
 }
 

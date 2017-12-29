@@ -21,3 +21,12 @@ target_link_libraries(fbdirect
 	android
 	log
 )
+
+# optimize by default
+# Quite frankly, unoptimized code is harder to read than optimized code
+# The only issue with optimized code is to know where the static
+# funcion code has been moved.
+target_compile_options(fbdirect PRIVATE
+	"$<$<CONFIG:RELEASE>:-O3>"
+	"$<$<CONFIG:DEBUG>:-O3>"
+)
